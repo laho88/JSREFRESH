@@ -21,9 +21,12 @@
                 function testProp1(){
                     alert(this.firstProp);
                 }
-            -  use same (.) notation to attach the method to the object:
 
-                demoOne.displayProp1
+        4.  attach a method name to your object and assign to is the definition of the new function | 
+
+                demoOne.displayProp1 = testProp1;
+
+                Notice that no () were used at the end. This assigns the definition of function testProp1 as the method value. Using the parens () will execute the function instead and assign the return value instead.
             
             
 //  - Use JS 
