@@ -7,39 +7,59 @@
 
             demoOne = new Object(); 
 
-            The demoOne object is now in memory but has no 
-            description (properties) or behaviors (methods) defined.
+            The demoOne object is stored in memory but has no 
+            description (properties) or behaviors (methods) defined yet.
 
-        2. Add a property and value:
-            Using (.) dot notation after the objects name, assign a variable name to the new property like such:
-
+        2. Add a property and value: 
+            
             demoOne.firstProp = "And then any required values within";
+
+            Using (.) dot notation the demoOne object now owns the property firstProp with a string
+
     
         3. Easily Add a method too using the same format:
-            - First define a function
+            - First define a function:
 
                 function testProp1(){
                     alert(this.firstProp);
                 }
 
-        4.  attach a method name to your object and assign to is the definition of the new function | 
+            - Choose a method name then attach it to demoOne object (.)  
 
                 demoOne.displayProp1 = testProp1;
 
-                Notice that no () were used at the end. This assigns the definition of function testProp1 as the method value. Using the parens () will execute the function instead and assign the return value instead.
+            - Last, assign method displayProp1 to hold the function definition of testProp1.
+                ! Notice that no () were used at the end, doing as so assigns the definition of function testProp1 as the method value. Using the parens () will instead execute function testProp1 and assign the return value instead!
             
             
-//  - Use JS 
 */
+//Demo One in practice:
 
-objDemo1 = new Object();
+//Directly Instantiate:
+    objDemo1 = new Object();
 
-objDemo1.focus = 33;
-o
+    //add properties:
+    objDemo1.age = 2;
+    objDemo1.name = "Mr Winters";
+    objDemo1.hasSibling = true;
+    objDemo1.siblingCount = 3;
+
+    //add a method:
+    function getSiblingCount(){
+        if(this.hasSibling == true){
+            return this.siblingCount;
+        }
+    }
+
+    objDemo1.getCount = getSiblingCount;
+    console.log("Siblings:", objDemo1.getCount());
+    console.log("Direct Instance:", objDemo1)
 
 
+/// this - JS Keyword ///
 
-
+/* the keyword: 'this' can be a difficult concept. 
+    'this' is a keyword that identifies the source of a value being used. 'this' always points to 
 
 //DEMO 2
 
